@@ -14,7 +14,7 @@ int main()
 		j=rand()%40;
 		while(*info[i]!=0)
 		  j++;
-		*(group[0]+j%60)=i;
+		*info[i]=i;
 	}
 	for(i=0;i<10;i++){
 		printf("第%d组：",i+1);
