@@ -12,9 +12,9 @@ int main()
 	srand(time(NULL));
 	for(i=0;i<=39;i++){
 		j=rand()%40;
-		while(*info[i]!=0)
+		while(info[i]!=0)
 		  j++;
-		*info[i]=i;
+		info[i]=i;
 	}
 	for(i=0;i<10;i++){
 		printf("第%d组：",i+1);
