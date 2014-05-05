@@ -7,4 +7,3 @@ test:test.o
 	gcc -o test test.o
 test.0:test.c
 	gcc -c test.c
-
