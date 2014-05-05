@@ -1,6 +1,10 @@
+all:lyl test
 lyl:lyl.o
-	cc -o lyl lyl.c
+	gcc -o lyl lyl.o
 lyl.0:lyl.c
-	cc -c lyl.c
-clean:
-	rm lyl.o
+	gcc -c lyl.c
+test:test.o
+	gcc -o test test.o
+test.0:test.c
+	gcc -c test.c
+
