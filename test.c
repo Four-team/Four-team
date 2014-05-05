@@ -1,7 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
+
+#include "student_info.h"
+#include <stdio.h>      
 #include <time.h>
 #include "student_info.h"
+
 
 void main()
 {
@@ -26,5 +28,4 @@ void main()
 		}
    		/*printf("%d ",group[i][j]);*/
   		printf("\n");
-	}
 }
