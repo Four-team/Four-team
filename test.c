@@ -1,30 +1,24 @@
-#include <stdio.h>
+#include "student_info.h"
+#include <stdio.h>      
 #include <stdlib.h>
 #include <time.h>
-#include "student_info.h"
 
-void main()
-{
- 	int group[10][4] = {0};
- 	int i,j,k;
- 	srand(time(NULL));
- 	for(i = 0;i < 40;i++)
- 	{
-  		j = rand() % 40; //生成0～39的随机数
-  		while(*(group[0] + j % 40) != 0)
-   		j++;
-  		*(group[0] + j % 40) = i;
- 	}
- 	for(i=0;i<10;i++)
- 	{
-
-		printf("第%d组：\n",i+1);
-  		for(j=0;j<4;j++)
-		{
-			k=group[i][j];
-			printf("%d - %s\n", info[k].id, info[k].name);
+int main()
+{	
+	
+	int i;int j=10;int flag=0;int count=0;
+	while(j--){
+		printf("第%d组",10-j);
+		printf("结果为：\n");
+	for (i = 0; i < sizeof(info)/sizeof(struct student); ++i) {
+		flag=rand()%40;
+		count++;
+		printf("%d - %s\n", info[flag].id, info[flag].name);
+		if(count==4){
+			count=0;
+			break;
 		}
-   		/*printf("%d ",group[i][j]);*/
-  		printf("\n");
- 	}
+	}
+	}
+	return 0;
 }
